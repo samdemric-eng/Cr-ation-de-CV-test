@@ -12,17 +12,22 @@ export default {
     },
     extend: {
       colors: {
-        // Preset D — "Aura Digitale" (variante Golden Orange)
-        void: '#1A1722',      // Primaire (fond profond, éclairci)
-        accent: '#F5A524',    // Golden orange
-        'accent-soft': '#FFC15E', // Golden clair (highlights)
-        ghost: '#F4F1EA',     // Clair (chaud)
-        graphite: '#252132',  // Sombre secondaire (éclairci)
+        // Design system "Ember" — warm charcoal + orange→peach gradient
+        void: '#0E0A08',      // Fond brun charbon chaud
+        surface: '#181210',   // Surface des cartes (utilisée en glass)
+        accent: '#EE6C3A',    // Orange chaud
+        'accent-soft': '#F8B27E', // Pêche
+        ghost: '#F6EDE6',     // Texte clair chaud
+        muted: '#B3A599',     // Texte atténué
+        graphite: '#181210',  // Alias rétro-compat (= surface)
       },
       fontFamily: {
         sans: ['Sora', 'system-ui', 'sans-serif'],
         serif: ['"Instrument Serif"', 'Georgia', 'serif'],
         mono: ['"Fira Code"', 'monospace'],
+      },
+      backgroundImage: {
+        'accent-gradient': 'linear-gradient(135deg, #EC6A3C 0%, #F9B98A 100%)',
       },
       borderRadius: {
         '4xl': '2rem',
