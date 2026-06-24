@@ -13,7 +13,7 @@ const root = path.resolve(__dirname, '..')
 
 /* ----------------------------- Contenu ----------------------------- */
 const NAME = 'DOVONON Samuel Yann Emric'
-const ROLE = 'Entrepreneur & Créateur de Contenu Digital'
+const ROLE = 'Entrepreneur, Créateur de Contenu & Développeur'
 const TAGLINE = 'Juriste de formation • Vidéo, Design & Copywriting'
 
 const ABOUT = [

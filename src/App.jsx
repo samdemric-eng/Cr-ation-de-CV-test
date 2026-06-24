@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const NAME = 'DOVONON Samuel Yann Emric'
 const SHORT = 'S.D.'
-const ROLE = 'Entrepreneur & Créateur de Contenu Digital'
+const ROLE = 'Entrepreneur, Créateur de Contenu & Développeur'
 
 const STATS = [
   { value: 'Juriste & Créatif', label: '' },
@@ -310,7 +310,7 @@ function Hero({ onContact }) {
         <div className="relative z-10 text-center md:text-left">
           <span className="hero-anim mb-6 inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-3xl border border-[rgba(244,164,96,0.2)] bg-[rgba(24,18,16,0.5)] px-3.5 py-1.5 text-center font-mono text-[10px] uppercase leading-snug tracking-wider text-accent-soft backdrop-blur-sm sm:rounded-full sm:px-4 sm:text-xs">
             <Sparkles size={13} className="shrink-0" />
-            Entrepreneur • Créatif • Juriste
+            Entrepreneur • Créateur • Développeur
           </span>
 
           <h1 className="hero-anim break-words text-[1.75rem] font-extrabold leading-[1.12] tracking-tight text-ghost xs:text-4xl sm:text-6xl md:text-[4.2rem]">
