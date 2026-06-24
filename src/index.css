@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void text-ghost font-sans antialiased;
+    overflow-x: hidden;
+    /* Léger dégradé chaud pour éviter un fond trop plat / trop sombre */
+    background-image:
+      radial-gradient(80% 50% at 50% -10%, rgba(245, 165, 36, 0.1), transparent 70%),
+      radial-gradient(60% 40% at 100% 100%, rgba(245, 165, 36, 0.06), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  /* Scrollbar discrète */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a1722;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a3348;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f5a524;
+  }
+
+  ::selection {
+    background: rgba(245, 165, 36, 0.35);
+    color: #f4f1ea;
+  }
+}
+
+@layer components {
+  /* Bouton "magnétique" — scale subtil au survol */
+  .magnetic {
+    @apply transition-transform duration-300 ease-magnetic will-change-transform;
+  }
+  .magnetic:hover {
+    transform: scale(1.03);
+  }
+  .magnetic:active {
+    transform: scale(0.98);
+  }
+
+  /* Lift subtil sur les liens / éléments interactifs */
+  .lift {
+    @apply transition-all duration-300 ease-magnetic;
+  }
+  .lift:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Carte d'expérience — léger scale + ombre au survol */
+  .card-hover {
+    @apply transition-all duration-300 ease-magnetic;
+  }
+  .card-hover:hover {
+    transform: scale(1.01);
+    box-shadow: 0 24px 60px -20px rgba(245, 165, 36, 0.35);
+  }
+}
+
+@layer utilities {
+  /* Glow golden sur le nom (Preset D — variante) */
+  .text-glow {
+    text-shadow:
+      0 0 24px rgba(245, 165, 36, 0.5),
+      0 0 60px rgba(245, 165, 36, 0.28);
+  }
+
+  .accent-glow {
+    box-shadow:
+      0 0 0 1px rgba(245, 165, 36, 0.45),
+      0 0 30px rgba(245, 165, 36, 0.3);
+  }
+
+  /* Overlay de bruit global — élimine les dégradés plats */
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  /* Halo radial décoratif */
+  .aura {
+    background:
+      radial-gradient(60% 60% at 50% 0%, rgba(245, 165, 36, 0.16), transparent 70%),
+      radial-gradient(40% 40% at 80% 30%, rgba(245, 165, 36, 0.1), transparent 70%);
+  }
+}
