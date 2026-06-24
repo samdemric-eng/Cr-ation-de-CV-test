@@ -13,8 +13,8 @@ const root = path.resolve(__dirname, '..')
 
 /* ----------------------------- Contenu ----------------------------- */
 const NAME = 'DOVONON Samuel Yann Emric'
-const ROLE = 'Résolveur de problèmes'
-const TAGLINE = 'Juriste de formation • Créateur digital'
+const ROLE = 'Entrepreneur & Créateur de Contenu Digital'
+const TAGLINE = 'Juriste de formation • Vidéo, Design & Copywriting'
 
 const ABOUT = [
   "Juriste de formation, créateur dans l'âme. J'ai passé des années à décortiquer des problèmes complexes — et j'ai compris qu'un bon argument juridique et une bonne histoire de marque obéissent à la même logique : la clarté.",
@@ -113,8 +113,8 @@ doc.rect(0, headerH, W, 4).fill(ACCENT)
 
 doc.fillColor('#F6EDE6').font('Helvetica-Bold').fontSize(25)
 doc.text(NAME, M, 40, { width: CW })
-doc.fillColor(PEACH).font('Helvetica-Oblique').fontSize(14)
-doc.text(ROLE, M, 76)
+doc.fillColor(PEACH).font('Helvetica-Oblique').fontSize(13)
+doc.text(ROLE, M, 76, { width: CW })
 doc.fillColor('#C9C2BB').font('Helvetica').fontSize(9.5)
 doc.text(TAGLINE, M, 98)
 doc.fillColor('#B7AFA8').fontSize(9)
