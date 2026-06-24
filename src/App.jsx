@@ -806,7 +806,7 @@ function Contact({ onContact }) {
 function Footer() {
   return (
     <footer className="rounded-t-5xl border-t border-[rgba(244,164,96,0.14)] bg-surface/60 px-6 py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row">
+      <div className="mx-auto flex max-w-6xl items-center justify-center">
         <div className="flex flex-wrap items-center justify-center gap-2.5">
           {SOCIALS.map((s) => {
             const Icon = s.icon
@@ -824,13 +824,6 @@ function Footer() {
               </a>
             )
           })}
-        </div>
-        <div className="flex items-center gap-2 font-mono text-xs text-ghost/60">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400" />
-          </span>
-          En ligne
         </div>
       </div>
     </footer>
